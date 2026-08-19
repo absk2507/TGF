@@ -198,7 +198,7 @@ export default function Home() {
         <section className="chapter divider" id="members">
           <div className="wide-container">
             <SectionHeading icon={<UsersRound size={14} />} eyebrow="TGF ASSOCIATION" title="The hands behind TGF" description="The people who arrange the lights, remember the small details, and return every year to bring our Ganesh Chaturthi home." />
-            <div className="member-footer"><div className="scroll-indicator"><span /></div><button className="button primary compact" onClick={() => toast("The full member list will be added soon.")}>Meet every volunteer</button></div>
+            <div className="member-footer"><div className="scroll-indicator"><span /></div></div>
             <div className="member-strip" role="list">{members.map((member, index) => <article key={member.name} className="member-card" role="listitem"><span className="member-folio">Member / 0{index + 1}</span><div className="member-avatar" style={{ background: member.hue }}>{member.initials}</div><h3>{member.name}</h3><p>{member.role}</p></article>)}</div>
           </div>
         </section>
