@@ -27,16 +27,19 @@ import {
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 
+const assetBase = import.meta.env.VITE_GITHUB_PAGES === "true" ? `${import.meta.env.BASE_URL}assets/` : "/manus-storage/";
+const assetPath = (pagesName: string, manusName: string) => `${assetBase}${import.meta.env.VITE_GITHUB_PAGES === "true" ? pagesName : manusName}`;
+
 const assets = {
-  logo: "/manus-storage/softwarebois-mark_dbac1f76.png",
-  hero: "/manus-storage/hero-ganesha_48507333.jpg",
-  violetIdol: "/manus-storage/idol-violet_62b990de.jpg",
-  saffronIdol: "/manus-storage/idol-saffron_3bf12cf1.jpg",
-  auction: "/manus-storage/auction-celebration_76fb153f.jpg",
-  group: "/manus-storage/community-group_717ee9c7.jpg",
-  community: "/manus-storage/festival-community_b13efdbb.jpg",
-  procession: "/manus-storage/festival-procession_e0d6d95a.jpg",
-  idol: "/manus-storage/festival-idol_963d95ea.jpg",
+  logo: assetPath("softwarebois-mark.png", "softwarebois-mark_dbac1f76.png"),
+  hero: assetPath("hero-ganesha.jpg", "hero-ganesha_48507333.jpg"),
+  violetIdol: assetPath("idol-violet.jpg", "idol-violet_62b990de.jpg"),
+  saffronIdol: assetPath("idol-saffron.jpg", "idol-saffron_3bf12cf1.jpg"),
+  auction: assetPath("auction-celebration.jpg", "auction-celebration_76fb153f.jpg"),
+  group: assetPath("community-group.jpg", "community-group_717ee9c7.jpg"),
+  community: assetPath("festival-community.jpg", "festival-community_b13efdbb.jpg"),
+  procession: assetPath("festival-procession.jpg", "festival-procession_e0d6d95a.jpg"),
+  idol: assetPath("festival-idol.jpg", "festival-idol_963d95ea.jpg"),
 };
 
 const navItems = [

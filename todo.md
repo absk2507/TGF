@@ -21,4 +21,8 @@
 - [x] Diagnose the GitHub Pages workflow failure and replace it with a hosting-compatible live deployment path.
 - [x] Save and deliver the corrected built-in-hosting checkpoint for live publishing.
 - [x] Build and deploy the static front end correctly to GitHub Pages to remove the 404.
-- [ ] Push the static Pages workflow and confirm the live GitHub Pages URL serves the generated site.
+- [x] Push the static Pages workflow and confirm the live GitHub Pages URL serves the generated site.
+- [x] Synchronize the corrected Pages workflow to the GitHub branch used by GitHub Actions.
+- [x] Configure the React router to render correctly under the GitHub Pages repository subpath.
+- [x] Rebuild, synchronize, and verify the router-base fix on the live GitHub Pages URL.
+- [x] Ensure the visual asset URLs are available to the static GitHub Pages deployment.
