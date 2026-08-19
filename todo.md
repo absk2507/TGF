@@ -17,4 +17,6 @@
 - [x] Build and visually verify that the members section no longer shows the orange indicator.
 - [x] Diagnose missing application sources in the uploaded repository and align the deployment configuration.
 - [x] Validate the full-stack production build for built-in live hosting and save a deployment-ready checkpoint.
-- [ ] Save and provide the validated live-hosting checkpoint for publishing.
+- [x] Save and provide the validated live-hosting checkpoint for publishing.
+- [x] Diagnose the GitHub Pages workflow failure and replace it with a hosting-compatible live deployment path.
+- [ ] Save and deliver the corrected built-in-hosting checkpoint for live publishing.
