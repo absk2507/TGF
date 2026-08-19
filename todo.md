@@ -5,3 +5,4 @@
 - [x] Remove the Lucky Draw navigation and winners content.
 - [x] Validate the revised page at desktop and mobile widths.
 - [x] Convert the Laddu Auction section into a responsive horizontal year-by-year archive rail.
+- [x] Remove auction record buttons, standardize the winner-entry card treatment, and replace pandal with Ganesh shed.
