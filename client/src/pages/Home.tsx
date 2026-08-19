@@ -191,13 +191,13 @@ export default function Home() {
         <section className="chapter divider" id="gang">
           <div className="wide-container">
             <SectionHeading icon={<UsersRound size={14} />} eyebrow="The gang" title="TGF ASSOCIATION, together" description="The friends and volunteers who show up every year and make the celebration feel like home." />
-            <figure className="group-photo"><img src={assets.group} alt="TGF ASSOCIATION community volunteers together" /><figcaption>One Ganesh shed, many hands, and a shared reason to return every year.</figcaption></figure>
+            <figure className="group-photo"><img src={assets.group} alt="TGF ASSOCIATION community volunteers together" /><figcaption>One TGF, many hands, and a shared reason to return every year.</figcaption></figure>
           </div>
         </section>
 
         <section className="chapter divider" id="members">
           <div className="wide-container">
-            <SectionHeading icon={<UsersRound size={14} />} eyebrow="TGF ASSOCIATION" title="The hands behind the Ganesh shed" description="The people who arrange the lights, remember the small details, and return every year to bring our Ganesh Chaturthi home." />
+            <SectionHeading icon={<UsersRound size={14} />} eyebrow="TGF ASSOCIATION" title="The hands behind TGF" description="The people who arrange the lights, remember the small details, and return every year to bring our Ganesh Chaturthi home." />
             <div className="member-strip" role="list">{members.map((member, index) => <article key={member.name} className="member-card" role="listitem"><span className="member-folio">Member / 0{index + 1}</span><div className="member-avatar" style={{ background: member.hue }}>{member.initials}</div><h3>{member.name}</h3><p>{member.role}</p></article>)}</div>
             <div className="member-footer"><div className="scroll-indicator"><span /></div><button className="button primary compact" onClick={() => toast("The full member list will be added soon.")}>Meet every volunteer</button></div>
           </div>
@@ -205,18 +205,18 @@ export default function Home() {
 
         <section className="chapter divider" id="donate">
           <div className="wide-container">
-            <SectionHeading icon={<Heart size={14} />} eyebrow="Support" title="Chip in for next year" description="Contributions support the Ganesh shed, decorations, prasadam, sound system, idol, and community gifts." />
+            <SectionHeading icon={<Heart size={14} />} eyebrow="Support" title="Support TGF ASSOCIATION" description="Contributions support TGF, decorations, prasadam, sound system, idol, and community gifts." />
             <div className="support-layout">
               <div className="qr-card" aria-label="QR code placeholder"><div className="qr-folio">RAMPURAM LEDGER / 2026</div><div className="qr-grid"><div className="qr-center">₹</div></div><span>Scan to add your share through UPI</span></div>
-              <div className="support-card"><div className="upi-apps"><span>PhonePe</span><span>Google Pay</span><span>Paytm</span><span>BHIM</span></div><h3>Keep the lights on next year</h3><p>Scan the QR code or use the UPI ID below from any UPI app.</p><div className="upi-id"><div><span>UPI ID</span><b>tgfassociation@upi</b></div><button onClick={copyUpi}>{copied ? <Check size={15} /> : <Copy size={15} />}{copied ? "Copied" : "Copy"}</button></div><button className="button primary compact" onClick={() => toast("Opening your preferred UPI app is not available in this preview.")}><Heart size={14} /> Add your share via UPI</button><div className="support-needs"><span>⌂ Ganesh Idol</span><span>▦ Ganesh Shed</span><span>◇ Decorations</span><span>◌ Sound System</span><span>♡ Prasadam</span><span>▥ Community Gifts</span></div></div>
+              <div className="support-card"><div className="upi-apps"><span>PhonePe</span><span>Google Pay</span><span>Paytm</span><span>BHIM</span></div><h3>Support TGF ASSOCIATION</h3><p>Scan the QR code or use the UPI ID below from any UPI app.</p><div className="upi-id"><div><span>UPI ID</span><b>tgfassociation@upi</b></div><button onClick={copyUpi}>{copied ? <Check size={15} /> : <Copy size={15} />}{copied ? "Copied" : "Copy"}</button></div><button className="button primary compact" onClick={() => toast("Opening your preferred UPI app is not available in this preview.")}><Heart size={14} /> Add your share via UPI</button><div className="support-needs"><span>⌂ Ganesh Idol</span><span>▦ TGF</span><span>◇ Decorations</span><span>◌ Sound System</span><span>♡ Prasadam</span><span>▥ Community Gifts</span></div></div>
             </div>
           </div>
         </section>
 
         <section className="chapter divider" id="find-us">
           <div className="wide-container">
-            <SectionHeading icon={<MapPin size={14} />} eyebrow="Find us" title="The way back to Rampuram" description="Visit the Ganesh shed in Rampuram, or find a familiar TGF ASSOCIATION voice for celebration updates and contributions." />
-            <div className="contact-grid"><article className="contact-card"><div className="contact-icon"><HomeIcon size={20} /></div><h3>TGF ASSOCIATION</h3><p>Rampuram Village<br />Pendurthi Mandal, Visakhapatnam<br />Andhra Pradesh, 531173</p><button className="button primary compact" onClick={() => toast("Map directions will open shortly.")}><MapPin size={14} /> Pin the Ganesh shed</button></article><article className="contact-card"><div className="contact-icon saffron"><MessageCircleHeart size={20} /></div><h3>Reach our circle</h3><a href="tel:+919059307481"><Phone size={13} /> +91 90593 07481</a><a href="tel:+919391277632"><Phone size={13} /> +91 93912 77632</a><a href="tel:+917386616435"><Phone size={13} /> +91 73866 16435</a><a href="mailto:tgfassociation@gmail.com"><Mail size={13} /> tgfassociation@gmail.com</a></article></div>
+            <SectionHeading icon={<MapPin size={14} />} eyebrow="Find us" title="The way back to Rampuram" description="Visit TGF in Rampuram, or find a familiar TGF ASSOCIATION voice for celebration updates and contributions." />
+            <div className="contact-grid"><article className="contact-card"><div className="contact-icon"><HomeIcon size={20} /></div><h3>TGF ASSOCIATION</h3><p>Rampuram Village<br />Pendurthi Mandal, Visakhapatnam<br />Andhra Pradesh, 531173</p><button className="button primary compact" onClick={() => toast("Map directions will open shortly.")}><MapPin size={14} /> Pin TGF</button></article><article className="contact-card"><div className="contact-icon saffron"><MessageCircleHeart size={20} /></div><h3>Reach our circle</h3><a href="tel:+919059307481"><Phone size={13} /> +91 90593 07481</a><a href="tel:+919391277632"><Phone size={13} /> +91 93912 77632</a><a href="tel:+917386616435"><Phone size={13} /> +91 73866 16435</a><a href="mailto:tgfassociation@gmail.com"><Mail size={13} /> tgfassociation@gmail.com</a></article></div>
           </div>
         </section>
 
