@@ -64,6 +64,12 @@ const immersionAlbums = [
   { year: "2022", image: assets.procession, description: "165 photos from the send-off." },
 ];
 
+const auctionYears = [
+  { year: "2025", image: assets.auction, record: "Rs. 16,000", title: "Won by Kiran and Sravan", note: "The winning contribution carries the celebration into the next year, supporting setup, decorations, prizes, and prasadam." },
+  { year: "2024", image: assets.procession, record: "Auction archive", title: "The 2024 laddu story", note: "A place for the year’s auction memories, winning moment, and the people who kept the pandal moving." },
+  { year: "2023", image: assets.community, record: "Auction archive", title: "The 2023 laddu story", note: "A growing ledger of the bids, hands, and shared celebration behind every annual laddu auction." },
+];
+
 const members = [
   { name: "Tarun Teja", role: "Founder", initials: "TT", hue: "#26275e" },
   { name: "Pavan", role: "Treasurer", initials: "P", hue: "#b87a36" },
@@ -175,8 +181,10 @@ export default function Home() {
 
         <section className="chapter divider" id="auction">
           <div className="wide-container">
-            <SectionHeading icon={<Landmark size={14} />} eyebrow="Auction" title="Laddu Auction" description="The first laddu auction is highlighted as its own story, with the winning bid and winner details easy to scan." />
-            <div className="auction-layout"><img src={assets.auction} alt="Community members celebrating the laddu auction" /><div className="auction-summary"><span className="gold-label">2025</span><h3>Rs. 16,000</h3><h4>Won by Kiran and Sravan</h4><p>The auction contribution helps carry the celebration forward into next year, supporting setup, decorations, prizes, and prasadam.</p></div></div>
+            <SectionHeading icon={<Landmark size={14} />} eyebrow="Auction" title="Laddu Auction, year by year" description="A side-by-side TGF ledger of the winning moments and stories that help carry each celebration into the next year." />
+            <div className="auction-rail">
+              {auctionYears.map((auction) => <article className={`auction-year-card ${auction.year === "2025" ? "featured-auction" : ""}`} key={auction.year}><img src={auction.image} alt={`${auction.year} laddu auction archive`} /><div className="auction-year-copy"><span className="auction-folio">LADDU LEDGER / {auction.year}</span><h3>{auction.record}</h3><h4>{auction.title}</h4><p>{auction.note}</p><button className="archive-action" onClick={() => handleArchiveAction(`${auction.year} laddu auction`)}>Open the {auction.year} record</button></div></article>)}
+            </div>
           </div>
         </section>
 
