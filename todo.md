@@ -1,0 +1,6 @@
+- [x] Rename visible branding and relevant metadata from Softwarebois to TGF ASSOCIATION.
+- [x] Remove the Aagaman countdown and its timer cards from the hero.
+- [x] Change the community ribbon wording to TGF ASSOCIATION GROUP.
+- [x] Convert the gallery and immersion displays into horizontal side-by-side album carousels.
+- [x] Remove the Lucky Draw navigation and winners content.
+- [x] Validate the revised page at desktop and mobile widths.
