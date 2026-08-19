@@ -19,4 +19,6 @@
 - [x] Validate the full-stack production build for built-in live hosting and save a deployment-ready checkpoint.
 - [x] Save and provide the validated live-hosting checkpoint for publishing.
 - [x] Diagnose the GitHub Pages workflow failure and replace it with a hosting-compatible live deployment path.
-- [ ] Save and deliver the corrected built-in-hosting checkpoint for live publishing.
+- [x] Save and deliver the corrected built-in-hosting checkpoint for live publishing.
+- [x] Build and deploy the static front end correctly to GitHub Pages to remove the 404.
+- [ ] Push the static Pages workflow and confirm the live GitHub Pages URL serves the generated site.
