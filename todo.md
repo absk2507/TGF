@@ -15,3 +15,6 @@
 - [x] Remove the visible orange member scroll indicator.
 - [x] Remove the member scroll indicator markup and its related CSS.
 - [x] Build and visually verify that the members section no longer shows the orange indicator.
+- [x] Diagnose missing application sources in the uploaded repository and align the deployment configuration.
+- [x] Validate the full-stack production build for built-in live hosting and save a deployment-ready checkpoint.
+- [ ] Save and provide the validated live-hosting checkpoint for publishing.
