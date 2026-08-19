@@ -7,3 +7,4 @@
 - [x] Convert the Laddu Auction section into a responsive horizontal year-by-year archive rail.
 - [x] Remove auction record buttons, standardize the winner-entry card treatment, and replace pandal with Ganesh shed.
 - [x] Change the support heading to Support TGF ASSOCIATION and replace Ganesh shed terminology with TGF.
+- [x] Remove the Featured Record badge and move the member scroll controls above the member cards.
