@@ -26,3 +26,8 @@
 - [x] Configure the React router to render correctly under the GitHub Pages repository subpath.
 - [x] Rebuild, synchronize, and verify the router-base fix on the live GitHub Pages URL.
 - [x] Ensure the visual asset URLs are available to the static GitHub Pages deployment.
+- [x] Diagnose and repair the blank live GitHub Pages screen.
+- [x] Reproduce the plain GitHub Pages URL in a fresh browser session and inspect its runtime behavior.
+- [x] Apply and verify a concrete mitigation if the blank screen is caused by cached static assets.
+- [x] Add a one-time recovery path for stale or missing GitHub Pages client bundles.
+- [x] Verify the live root URL renders after the stale-bundle recovery deployment.
