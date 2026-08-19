@@ -25,6 +25,7 @@ import {
   X,
 } from "lucide-react";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 const assets = {
   logo: "/manus-storage/softwarebois-mark_dbac1f76.png",
@@ -95,6 +96,12 @@ function scrollToId(id: string) {
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
   const [copied, setCopied] = useState(false);
+  const submitComment = trpc.comments.submit.useMutation({
+    onSuccess: result => {
+      toast.success(result.notified ? "Comment saved — TGF ASSOCIATION has been notified." : "Comment saved for TGF ASSOCIATION.");
+    },
+    onError: () => toast.error("Your comment could not be sent. Please try again."),
+  });
 
   const copyUpi = async () => {
     await navigator.clipboard?.writeText("tgfassociation@upi");
@@ -105,8 +112,16 @@ export default function Home() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    event.currentTarget.reset();
-    toast.success("Thank you — your message has been recorded.");
+    const form = event.currentTarget;
+    const values = new FormData(form);
+    const name = String(values.get("name") || "").trim();
+    const email = String(values.get("email") || "").trim();
+    const message = String(values.get("message") || "").trim();
+
+    submitComment.mutate(
+      { name: name || undefined, email: email || undefined, message },
+      { onSuccess: () => form.reset() },
+    );
   };
 
   const handleArchiveAction = (label: string) => toast(`${label} will open shortly.`);
@@ -222,8 +237,8 @@ export default function Home() {
 
         <section className="chapter divider feedback-section" id="feedback">
           <div className="wide-container">
-            <SectionHeading icon={<Mail size={14} />} eyebrow="Advice / concerns" title="Leave a note in the ledger" description="Send a suggestion, concern, or idea directly to the TGF ASSOCIATION team. Your email helps us return with an answer when needed." />
-            <form className="feedback-form" onSubmit={handleSubmit}><label>Your email<input type="email" required placeholder="yourname@example.com" /></label><label>Your note<textarea required maxLength={2000} placeholder="What should the next celebration remember?" /></label><button className="button primary compact" type="submit">Send it to the group <ArrowRight size={14} /></button></form>
+            <SectionHeading icon={<Mail size={14} />} eyebrow="Comments" title="Share a comment with TGF" description="Every comment is saved for TGF ASSOCIATION and sends an owner notification when it arrives." />
+            <form className="feedback-form" onSubmit={handleSubmit}><label>Your name <span>(optional)</span><input name="name" maxLength={120} placeholder="Your name" /></label><label>Email <span>(optional)</span><input name="email" type="email" maxLength={320} placeholder="yourname@example.com" /></label><label className="comment-field">Your comment<textarea name="message" required minLength={3} maxLength={2000} placeholder="Write your comment here..." /></label><button className="button primary compact" type="submit" disabled={submitComment.isPending}>{submitComment.isPending ? "Sending..." : "Send comment"} <ArrowRight size={14} /></button></form>
           </div>
         </section>
       </main>

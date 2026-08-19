@@ -9,3 +9,6 @@
 - [x] Change the support heading to Support TGF ASSOCIATION and replace Ganesh shed terminology with TGF.
 - [x] Remove the Featured Record badge and move the member scroll controls above the member cards.
 - [x] Remove the Meet every volunteer action while retaining the member scroll indicator.
+- [x] Add a persistent visitor comment box and an administrator notification workflow.
+- [x] Include commenter name and email in every owner notification payload.
+- [x] Add an admin-only review route for stored visitor comments.
