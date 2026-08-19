@@ -12,3 +12,6 @@
 - [x] Add a persistent visitor comment box and an administrator notification workflow.
 - [x] Include commenter name and email in every owner notification payload.
 - [x] Add an admin-only review route for stored visitor comments.
+- [x] Remove the visible orange member scroll indicator.
+- [x] Remove the member scroll indicator markup and its related CSS.
+- [x] Build and visually verify that the members section no longer shows the orange indicator.
